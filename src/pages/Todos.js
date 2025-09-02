@@ -52,7 +52,7 @@ function Todos() {
 
     try {
       const promise = axios.post(
-        "http://localhost:5000/api/todos",
+        "https://todo-backend-kzy0.onrender.com/api/todos",
         { text: newTodo },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -84,7 +84,7 @@ function Todos() {
 
     try {
       const promise = axios.put(
-        `http://localhost:5000/api/todos/${id}`,
+        `https://todo-backend-kzy0.onrender.com/api/todos/${id}`,
         { text: editingText },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -101,7 +101,7 @@ function Todos() {
   // Delete Todo
   const deleteTodo = async (id) => {
     try {
-      const promise = axios.delete(`http://localhost:5000/api/todos/${id}`, {
+      const promise = axios.delete(`https://todo-backend-kzy0.onrender.com/api/todos/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       await toast.promise(promise, {
@@ -117,7 +117,7 @@ function Todos() {
   const toggleTodo = async (id, completed) => {
     try {
       const promise = axios.put(
-        `http://localhost:5000/api/todos/${id}`,
+        `https://todo-backend-kzy0.onrender.com/api/todos/${id}`,
         { completed: !completed },
         { headers: { Authorization: `Bearer ${token}` } }
       );
