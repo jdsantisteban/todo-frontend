@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
     try {
       const promise = axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://todo-backend-kzy0.onrender.com/api/auth/register",
         form
       );
 
