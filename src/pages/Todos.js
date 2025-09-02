@@ -22,7 +22,7 @@ function Todos() {
 
     const fetchTodos = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/todos", {
+        const res = await axios.get("https://todo-backend-kzy0.onrender.com/api/todos", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTodos(res.data);
